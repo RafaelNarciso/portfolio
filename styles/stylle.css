@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2? family= Krona+One & família= Montserrat:wght@100;400;600 & display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+:root{
+    --cor-primaria: #0F1035;
+    --cor-segundaria:#eee;
+    --cor-terciaria :#7FC7D9;
+    --cor-Quaternaria :#838383;
+    --cor-hover: #365486;
+    --cor-border-hover:#FFF;
+
+
+    --font-primaria:'Krona One', sans-serif;
+    --font-segundaria:'Montserrat',sans-serif;
+}
+body{
+    background-color:var(--cor-primaria);
+}
+
+header{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cabecalho {
+    display: flex;
+    flex-direction: column; /* Empilha os itens do cabeçalho (menu e título) */
+    align-items: center; /* Centraliza os itens no eixo horizontal */
+    padding: 1rem; /* Espaçamento interno no cabeçalho */
+}
+
+.cabecalho__menu {
+    display: flex; /* Exibe os links do menu na horizontal */
+    gap: 2rem; /* Espaçamento entre os links */
+}
+
+.cabecalho__menu__link{
+    text-decoration: none;
+    font-family: var(--font-segundaria);
+    font-size: 24px;
+    font-weight: 400px;
+    color: var(--cor-terciaria);
+   
+}
+.cabecalho__menu__link:hover{
+    color: white;
+    cursor: pointer;
+    border:var(--cor-border-hover);
+}
+
+.cabecalho__titulo {
+    margin-top: 1rem; /* Espaço entre o menu e o título */
+    font-family: var(--font-primaria);
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--cor-segundaria);
+    text-align: center; /* Centraliza o texto dentro do h1 */
+}
+
+
+.gallery-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+    padding: 0 0.5vw;
+}
+.gallery-items{
+    width: 340px;
+    height: 340px;
+    border: 10px solid var(--cor-border-hover);
+    box-shadow: 5px 5px 5px var(--cor-Quaternaria);
+    flex-grow: 1;
+}
+.gallery-items img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery-items:hover{
+    transform: scale(1.3);
+}
+.rodape{
+    padding: 24px 0;
+    margin: 10px;
+    border: 0;
+    height: 400;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-primaria);
+    background-color:var(--cor-terciaria);
+    
+    text-align: center;
+    font-family: var(--font-segundaria);
+    font-size:1.5rem;
+    font-weight: 400;
+   
+    
+}
+
+@media(max-width: 1000px ){/*aqui estou trabalhando a dispposição da tela para dispositivo mobile*/
+    
+    .cabecalho{
+     padding: 24%;   
+    }
+    .cabecalho__menu{
+        justify-content: center;
+    }
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 10%;
+        gap: 82px;
+    }
+    .apresentacao__conteudo{
+        width: auto;
+    }
+    .rodape{
+        
+        text-align: center;
+    }
+    
+
+}
