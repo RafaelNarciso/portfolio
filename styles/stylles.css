@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2? family= Krona+One & família= Montserrat:wght@100;400;600 & display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+}
+
 :root{
     --cor-primaria: #0F1035;
     --cor-segundaria:#DCF2F1;
@@ -12,18 +19,14 @@
 
 
 
-*{
-    margin: 0;
-    padding: 0;
-    
-}
+
 body{  
     box-sizing: border-box;
     background-color: var(--cor-primaria);
     color: var(--cor-segundaria);
 }
 .cabecalho{
-    padding: 2%  0% 0% 15% ;
+    padding: 1% 0% 0% 15%;
 }
 
 .cabecalho__menu{
@@ -32,22 +35,21 @@ body{
 }
 
 .cabecalho__menu__link{
+    text-decoration: none;
     font-family: var(--font-segundaria);
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 400px;
     color: var(--cor-terciaria);
-    text-decoration: none;
-    
+   
+}
+.cabecalho__menu__link:hover{
+    color: white;
+    cursor: pointer;
+    border:var(--cor-border-hover);
 }
 
-H1{
-    font-weight: bold;
 
-}
 
-.apresentacao{
-    display: flex;
-}
 
 .titulo-destaque{
     color: var(--cor-terciaria);
@@ -55,8 +57,9 @@ H1{
 }
 
 .apresentacao{
+    margin-top: 10px;
     display: flex;
-    padding: 8% 15%; 
+    padding: 10% 15%; 
     align-items:center;
     justify-content: space-between;
     gap:82px;
@@ -67,7 +70,6 @@ H1{
 
 .apresentacao__conteudo{
     width: 50%;
-    height: 493px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -133,10 +135,10 @@ H1{
 }
 
 .rodape{
-   
+    padding: 24px 0;
     background-color:var(--cor-terciaria);
     color: var(--cor-primaria);
-    padding: 24px;
+    
     text-align: center;
     font-family: var(--font-segundaria);
     font-size:1.5rem;
@@ -149,26 +151,24 @@ H1{
    
 }
 
-@media(max-width: 890px ){/*aqui estou trabalhando a dispposição da tela para dispositivo mobile*/
-    body{
-        background-color: #000;
-    }
+@media(max-width: 1000px ){/*aqui estou trabalhando a dispposição da tela para dispositivo mobile*/
+    
     .cabecalho{
-     padding: 10%;   
+     padding: 24%;   
     }
     .cabecalho__menu{
         justify-content: center;
     }
     .apresentacao{
         flex-direction: column-reverse;
-        padding: 5%;
+        padding: 10%;
         gap: 82px;
     }
     .apresentacao__conteudo{
         width: auto;
     }
     .rodape{
-        width: auto;
+        
         text-align: center;
     }
     
